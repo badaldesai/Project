@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The content of this interaction specification is empty, because for measuring the search suggestion leak we just type into the search field and wait for the suggestions to appear.  -->
+<specification>
+</specification>

@@ -1,0 +1,16 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/mac/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/emailup/com.python.pydev.analysis/v2_indexcache
+script|1416974880000|/Users/mac/Documents/workspace/emailup/src/script.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=script
+-- END DICTIONARY
+-- START TREE 1
+1
+def|1|define_DB!10@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

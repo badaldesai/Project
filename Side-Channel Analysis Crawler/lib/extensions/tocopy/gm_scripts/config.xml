@@ -1,0 +1,5 @@
+<UserScriptConfig>
+	<Script filename="script.user.js" name="Script" namespace="http://www.greasespot.net/" description="" version="" enabled="true" basedir="script" modified="1296530052348" dependhash="da39a3ee5e6b4b0d3255bfef95601890afd80709">
+		<Include>*</Include>
+	</Script>
+</UserScriptConfig>

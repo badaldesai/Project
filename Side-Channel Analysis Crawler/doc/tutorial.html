@@ -1,0 +1,371 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Peter Chapman">
+	<META NAME="CREATED" CONTENT="20111002;15200558">
+	<META NAME="CHANGEDBY" CONTENT="Peter Chapman">
+	<META NAME="CHANGED" CONTENT="20111003;18320684">
+	<STYLE TYPE="text/css">
+	<!--
+		P { margin-bottom: 0.08in }
+		H1 { margin-bottom: 0.08in }
+		H1.western { font-family: "Arial", sans-serif; font-size: 16pt }
+		H1.cjk { font-family: "Microsoft YaHei"; font-size: 16pt }
+		H1.ctl { font-family: "Mangal"; font-size: 16pt }
+		H2 { margin-bottom: 0.08in }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-family: "Microsoft YaHei"; font-size: 14pt; font-style: italic }
+		H2.ctl { font-family: "Mangal"; font-size: 14pt; font-style: italic }
+		H3 { margin-bottom: 0.08in }
+		H3.western { font-family: "Arial", sans-serif }
+		H3.cjk { font-family: "Microsoft YaHei" }
+		H3.ctl { font-family: "Mangal" }
+		H4 { margin-bottom: 0.08in }
+		H4.western { font-family: "Arial", sans-serif; font-size: 11pt; font-style: italic }
+		H4.cjk { font-family: "Microsoft YaHei"; font-size: 11pt; font-style: italic }
+		H4.ctl { font-family: "Mangal"; font-size: 11pt; font-style: italic }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" BGCOLOR="#ffffff" DIR="LTR" STYLE="border: none; padding: 0in">
+<H1 CLASS="western">Side-Channel Analysis Crawler</H1>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0in"><A NAME="HA-spellcheck-error"></A><A NAME="zw-1328da3279bM64zV44681"></A>
+Peter Chapman and David Evans. Automated Black-Box Detection of
+Side-Channel Vulnerabilities in Web Applications. In 18th ACM
+Conference on Computer and Communications Security (CCS 2011),
+Chicago, IL. 17-21 October 2011.</P>
+<P STYLE="margin-left: 0.2in; margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-left: 0.39in; margin-bottom: 0in"><A NAME="zw-1328db6dfd8dq727M44681"></A><A NAME="zw-1328db6dfd9qgDgi44681"></A>
+Available at: <A HREF="http://www.cs.virginia.edu/sca/">http://www.cs.virginia.edu/sca/</A></P>
+<P STYLE="margin-left: 0.39in; margin-bottom: 0in"><BR>
+</P>
+<H2 CLASS="western">Contact</H2>
+<P>This is an initial release with a lot to be improved upon. Please
+feel free to contact Peter Chapman at <A HREF="mailto:pchapman@cs.virginia.edu">pchapman@cs.virginia.edu</A>
+with any questions or comments.</P>
+<H2 CLASS="western">Work Abstract</H2>
+<P><A NAME="zw-1328228bf42ZoNIx044681"></A><A NAME="zw-1328228bf42g8M7Go44681"></A><A NAME="zw-1328228bf421Hsl3k44681"></A><A NAME="zw-1328da33c4acAYBxr44681"></A><A NAME="zw-1328da3279dd-vvCC44681"></A><A NAME="zw-1328228bf42ro4T1e44681"></A><A NAME="zw-1328228bf42Biy9P244681"></A><A NAME="HA-spellcheck-error1"></A><A NAME="zw-1328da3279evH6-Bg44681"></A><A NAME="zw-1328228bf42VlY0U744681"></A><A NAME="zw-1328dc2c444P1ZSRA44681"></A><A NAME="zw-1328da3279fdlm9cS44681"></A><A NAME="zw-1328dc2b68drt-OW944681"></A><A NAME="zw-1328da327a068r30G44681"></A><A NAME="zw-1328228bf420Y9u2S44681"></A><A NAME="zw-1328228bf42CnSpqm44681"></A><A NAME="zw-1328228bf43MTy1-e44681"></A><A NAME="zw-1328228bf430CPLYu44681"></A>
+Web applications divide their state between the client and the
+server.&nbsp;The frequent and highly dynamic client-server
+communication that&nbsp;is characteristic of modern web applications
+leaves them vulnerable to side-channel leaks, even over encrypted
+connections. We&nbsp;describe a black-box tool for detecting and
+quantifying the severity of side-channel vulnerabilities by analyzing
+network traffic over&nbsp;repeated crawls of a web application. By
+viewing the adversary as&nbsp;a multi-dimensional classi&#64257;er,
+we develop a methodology to more&nbsp;thoroughly measure the
+distinguishably of network traffic for a variety of classification
+metrics. We evaluate our detection system on&nbsp;several deployed
+web applications, accounting for proposed client&nbsp;and server-side
+defenses. Our results illustrate the limitations of entropy
+measurements used in previous work and show how our new&nbsp;metric
+based on the Fisher criterion can be used to more robustly&nbsp;reveal
+side-channels in web applications.</P>
+<P><BR><BR>
+</P>
+<H2 CLASS="western">Requirements</H2>
+<P>The system must have Java 6 SE installed, Jpcap installed and
+linked correctly with the correct version of Java, and Firefox 3.x in
+the PATH as &ldquo;firefox&rdquo;. In future updates to this
+framework newer versions of Firefox will be supported, but the
+packaged Selenium plugin at the core of the system only works with
+Firefox 3.</P>
+<H2 CLASS="western">Overview</H2>
+<P><A NAME="HA-spellcheck-error2"></A><A NAME="zw-1328da327a13hMWl44681"></A>
+The Side-Channel Analysis (SCA)&nbsp;System is divided into two
+components. The first is the Side-Channel Analysis Crawler, which
+takes the appropriate specification files, exercises&nbsp;a web site
+or web application over multiple trials, building a consistent and
+representative finite state machine whilst recording relevant network
+traffic.</P>
+<H2 CLASS="western">Specification Files</H2>
+<P>It is necessary to write a set of specification files that tell
+the crawler how to interact with a website and which network traffic
+to measure. The interaction specification lists items to click and
+definitions for page equivalence. The input specification dictates
+what user input necessary where. Login specifications are for logging
+into websites. 
+</P>
+<H3 CLASS="western">Interaction Specification</H3>
+<P>At a minimum, an interaction specification must specify which
+elements on a site to click. Elements can be identified by tag,
+attribute, or via an XPath.</P>
+<H4 CLASS="western">Simple Example</H4>
+<PRE>&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;&#8203;<FONT SIZE=2 STYLE="font-size: 9pt">&lt;speci&#64257;cation&gt;</FONT>
+	&lt;click&gt;
+<A NAME="zw-1328db7907c5TMLT844681"></A><A NAME="zw-1328db7907crATZ0244681"></A>		&lt;tag&gt;a&lt;/tag&gt;
+<A NAME="zw-1328db7907cFVEb7n44681"></A><A NAME="zw-1328db7907cJGH9r44681"></A>		&lt;xpath&gt;/HTML/BODY/DIV[2]/DIV[2]/A&lt;/xpath&gt;
+<A NAME="zw-1328db7907cc6HrXm44681"></A><A NAME="zw-1328db7907cmVuMD44681"></A>	&lt;/click&gt;
+	&lt;noClick&gt;
+<A NAME="zw-1328db7907c5TMLT8446811"></A><A NAME="zw-1328db7907crATZ02446811"></A>		&lt;tag&gt;a&lt;/tag&gt;
+<A NAME="zw-1328db7907cFVEb7n446811"></A><A NAME="zw-1328db7907cJGH9r446811"></A>		&lt;xpath&gt;/HTML/BODY/A&lt;/xpath&gt;
+	&lt;/noClick&gt;
+<A NAME="zw-1328db7907drTSg1-44681"></A><A NAME="zw-1328db7907djuQ0I944681"></A>	&lt;waitFor&gt;
+<A NAME="zw-1328db7907d1DqgWC44681"></A><A NAME="zw-1328db7907dXs88A44681"></A>		&lt;id&gt;&lt;/id&gt;
+<A NAME="zw-1328db95fb3uz7iIh44681"></A><A NAME="zw-1328db95fb39JMygi44681"></A>		&lt;value&gt;footer&lt;/value&gt;
+<A NAME="zw-1328db96a0cS-K1Rb44681"></A><A NAME="zw-1328db96a0cNltxN44681"></A>		&lt;url&gt;.&lt;/url&gt;
+<A NAME="zw-1328db7907dP9zqA844681"></A><A NAME="zw-1328db7907dOy9-Jk44681"></A>	&lt;/waitFor&gt;
+<A NAME="zw-1328db7907dLpyaNK44681"></A><A NAME="zw-1328db7907dYKFpH944681"></A>	&lt;matchOverride&gt;
+<A NAME="zw-1328db7907d3S-S5Q44681"></A><A NAME="zw-1328db7907ekPNS-744681"></A>		&lt;match&gt;
+<A NAME="zw-1328db7907e5KwSQK44681"></A><A NAME="zw-1328db7907eHORX44681"></A><A NAME="zw-1328db7907ejMiniC44681"></A>			&lt;pattern&gt;
+<A NAME="zw-1328db855b2Jln3644681"></A><A NAME="zw-1328db855b2_PZ4H44681"></A><A NAME="zw-1328db848e30JTmb844681"></A><FONT SIZE=2 STYLE="font-size: 9pt">				&lt;</FONT><FONT SIZE=2 STYLE="font-size: 9pt">![CDATA[[\w\W](name=&quot;currentquestion&quot;)[\w\W]?(&lt;\/&#64257;eldset&gt;)]]&gt;</FONT>
+<A NAME="zw-1328db7907evpk7Y944681"></A><A NAME="zw-1328db7907eC4YgLn44681"></A>			&lt;/pattern&gt;
+<A NAME="zw-1328db7907ecx6Yc44681"></A><A NAME="zw-1328db7907efs2Iw44681"></A>			&lt;replace&gt;&lt;/replace&gt;
+<A NAME="zw-1328db7907eBQN-Cl44681"></A><A NAME="zw-1328db7907f0dOnWQ44681"></A>		&lt;/match&gt;
+<A NAME="zw-1328db7907fJKRTTv44681"></A><A NAME="zw-1328db7907ffhlYjT44681"></A>	&lt;/matchOverride&gt;
+&lt;/speci&#64257;cation&gt;</PRE><P>
+<BR><BR>
+</P>
+<P>The above example demonstrates nearly all of the possible
+configuration types for an interaction specification. Example
+specification files can be found under <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>doc/examples</FONT></FONT></FONT><FONT FACE="Times New Roman, serif">
+with comments</FONT>. The source code that parses the specification
+files are in the package <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>edu.virginia.pmc8p.sca.input</FONT></FONT></FONT>.
+<FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Click</FONT></FONT></FONT>
+and <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>noClick</FONT></FONT></FONT>
+elements tell the crawler which elements to click, and if necessary,
+which of those elements not to click. The <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>waitFor
+</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>element
+was created because in practice it is possible for pages to
+periodically load very slowly or incompletely, either due to a
+temporary shortage of locally available bandwidth or increased
+traffic on the target website. The crawler will wait for a specified
+element to load before considering the page &ldquo;loaded.&rdquo; In
+the Simple Example above, the crawler waits for the footer to load on
+every page it visits. If the footer does not load, it considered the
+page request to be a failure. By default two page loads are
+considered to be in the same state if the respective Document Object
+Models (DOMs) match exactly. This can be limiting in a number of
+situations. For example, if a site displays some sort of irrelevant
+or insignificant time-stamp, then each page load would be considered
+a new state, growing the search space infinitely. The </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>matchOverride
+</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>elements
+allows the user to specify subsections of the document to use in the
+comparisons. The </FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>matchOverride</FONT></FONT></FONT><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>
+consists of a series of match elements describing match and replace
+rules via regular expressions. The Simple Example removes matches to
+the regular expression from the state equivalence comparisons.</FONT></FONT></FONT></P>
+<H3 CLASS="western" STYLE="page-break-after: avoid"><FONT COLOR="#000000"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Input
+Specification</FONT></FONT></FONT></H3>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>If
+user-input is required to adequately use a website then an input
+specification contains information on what types of data to put
+where. The Search Example below is to test for side-channel leaks in
+Bing search suggestions, by measuring the network traffic associated
+with search suggestions from each letter.</FONT></FONT></FONT></P>
+<H4 CLASS="western"><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Search
+Example</FONT></FONT></FONT></H4>
+<PRE><FONT SIZE=2><FONT COLOR="#008080">&lt;</FONT><FONT COLOR="#000000">inputSpec&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>	&lt;form&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>		&lt;beforeClickElement&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;tag&gt;input&lt;/tag&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;attribute&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>				&lt;name&gt;id&lt;/name&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>				&lt;value&gt;sb_form_q&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;/attribute&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>		&lt;/beforeClickElement&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>		&lt;field&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;id&gt;sb_form_q&lt;/id&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt; &lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;a&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;b&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;c&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;d&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;e&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;f&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;g&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;h&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;i&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;j&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;k&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;l&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;m&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;n&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;o&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;p&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;q&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;r&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;s&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;t&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;u&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;v&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;w&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;x&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;y&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>			&lt;value&gt;z&lt;/value&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>		&lt;/field&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2>	&lt;/form&gt;</FONT></FONT>
+<FONT COLOR="#000000"><FONT SIZE=2><FONT FACE="Courier New, monospace">&lt;/</FONT><FONT FACE="Courier New, monospace">inputSpec</FONT><FONT FACE="Courier New, monospace">&gt;</FONT></FONT></FONT></PRE><P STYLE="margin-top: 0.17in">
+<FONT COLOR="#000000">A </FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>form</FONT></FONT></FONT><FONT COLOR="#000000">
+element contains the input information associated with a &ldquo;form&rdquo;
+as defined by the internally used Crawljax system. Exactly what
+defines a &ldquo;form&rdquo; is uncertain, but for practical purposes
+it is just a logical grouping. Within an </FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>form</FONT></FONT></FONT><FONT COLOR="#000000">
+element there must be at least two subelements, one that dictates
+when the form values are applied and another that contains the
+location and values for user input. </FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>beforeClickElement</FONT></FONT></FONT><FONT COLOR="#000000">
+is the button that will be clicked once the values specified in the
+rest of the specification have been applied. In practice this is
+usually some sort of submit button. In the above example it is the
+search text field on the Bing homepage. A </FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>field</FONT></FONT></FONT><FONT COLOR="#000000">
+element details the location and values to be filled in. Keep in
+mind, that for a complex form it is likely that there will be many
+field subelements associated with a single form. First in the field
+is an identifier for an </FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>input</FONT></FONT></FONT><FONT COLOR="#000000">
+element to be filled. This is usually an ID but could also be an
+XPath (see the NHS specification files for more examples). Then is a
+list of values to try in the form. In the sample case, the crawler
+will type each letter, individually, into the search suggestion
+field.</FONT></P>
+<P STYLE="margin-top: 0.17in"><FONT COLOR="#000000">There is also
+support for randomizing the data entered into fields, but it was
+never used in practice. I recommend looking at the source code for
+more information.</FONT></P>
+<H3 CLASS="western" STYLE="page-break-after: avoid"><FONT COLOR="#000000"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Login
+Specification</FONT></FONT></FONT></H3>
+<P><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Login
+specifications tell the crawler how to login to a website.</FONT></FONT></FONT></P>
+<PRE><FONT COLOR="#000000">&lt;randomPreCrawl&gt;</FONT>
+<FONT COLOR="#000000">&lt;preCrawl&gt;</FONT>
+<FONT COLOR="#000000">	&lt;url&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;http://www.google.com/health&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/url&gt;</FONT>
+<FONT COLOR="#000000">	&lt;input&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;Email&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;example@example.com&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/input&gt;</FONT>
+<FONT COLOR="#000000">	&lt;input&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;Passwd&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;FakePassword&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/input&gt;</FONT>
+<FONT COLOR="#000000">	&lt;click&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;signIn&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/click&gt;</FONT>
+<FONT COLOR="#000000">&lt;/preCrawl&gt;</FONT>
+<FONT COLOR="#000000">&lt;preCrawl&gt;</FONT>
+<FONT COLOR="#000000">	&lt;url&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;http://www.google.com/health&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/url&gt;</FONT>
+<FONT COLOR="#000000">	&lt;input&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;Email&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;example@example.org&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/input&gt;</FONT>
+<FONT COLOR="#000000">	&lt;input&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;Passwd&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">		&lt;value&gt;FakePassword2&lt;/value&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/input&gt;</FONT>
+<FONT COLOR="#000000">	&lt;click&gt;</FONT>
+<FONT COLOR="#000000">		&lt;id&gt;signIn&lt;/id&gt;</FONT>
+<FONT COLOR="#000000">	&lt;/click&gt;</FONT>
+<FONT COLOR="#000000">&lt;/preCrawl&gt;</FONT>
+<FONT COLOR="#000000">&lt;/randomPreCrawl&gt;</FONT></PRE><P STYLE="margin-top: 0.17in">
+The above code snippet for the now defunct Google Health, will begin
+each crawl by first logging into the dialog at the URL specified by
+the <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>url</FONT></FONT></FONT>
+element. The remaining elements under <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2>preCrawl</FONT></FONT></FONT>
+represent a list of input actions, in this case username and
+password, followed by the part of the page to click to complete the
+process (a sign-in button).</P>
+<H3 CLASS="western">Network Specifications</H3>
+<P STYLE="margin-top: 0.17in">The network capture program used in
+this framework Jpcap, by default, logs all network traffic. In
+practice this can contain a lot of irrelevant data, such as operating
+system update mechanisms or the RSS feed checker built into Mozilla
+Firefox. To filter out the extra traffic at filter file can be
+created which contains a list of IPs or protocols that will be
+filtered out of the recorded traces. Alternatively a whitelist file
+can be supplied which filters out all traffic but those matched by
+the whitelist. An non-empty whitelist overrides the filter file.</P>
+<H2 CLASS="western">Running a Crawl</H2>
+<P><FONT COLOR="#2a00ff"><FONT FACE="Courier New, monospace"><FONT SIZE=2>[sudo]
+java -jar crawl.jar &lt;Root URL&gt; &lt;Interaction Spec&gt; &lt;Filter
+File&gt; &lt;Whitelist File&gt; &lt;Max # of States&gt; &lt;Max
+Depth&gt; &lt;Max Run Time (Seconds)&gt; &lt;Trials&gt; &lt;Device to
+Monitor&gt; &lt;Output Directory&gt; &lt;Input Spec&gt; [Login Spec]</FONT></FONT></FONT></P>
+<PRE><FONT COLOR="#000000">java -jar crawl.jar http://google.com doc/examples/interaction/interaction-google.xml doc/examples/network/filter.txt doc/examples/network/whitelist-google.txt 27 2 3600 10 0 google-search doc/examples/input/input-google.xml </FONT>
+
+<FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Make sure to execute the binary from the root of the project directory.</FONT></FONT></FONT></PRE><H2 CLASS="western">
+Repairing a Crawl</H2>
+<P>It is often the case that something goes wrong during a specific
+trial of a crawl. To fix this, there is an included tool to &ldquo;repair&rdquo;
+a crawl. That is, given one trial designated as correct, it will
+match other trials accordingly. For example, let it be the case that
+the first trial goes perfectly, but the second trial found an error
+page on the crawled website, resulting in an extra state. The repair
+tool will analyze recorded states, throwing out extras, namely the
+error page.</P>
+<P>The usage for the crawl repairer is as follows:</P>
+<P><FONT COLOR="#2a00ff"><FONT FACE="Courier New, monospace"><FONT SIZE=2>java
+-jar repair.jar &lt;Good Crawl Directory&gt; &lt;Bad Crawl Directory&gt;</FONT></FONT></FONT></P>
+<PRE><FONT COLOR="#000000"><FONT FACE="Times New Roman, serif"><FONT SIZE=3>Make sure to execute the binary from the root of the project directory.</FONT></FONT></FONT></PRE><H2 CLASS="western">
+Modified Crawljax Files</H2>
+<PRE>
+WebDriverBrowserBuilder
+Crawler
+CandidateElementExtractor
+CrawlActions
+Helper
+WebDriverBackedEmbeddedBrowser
+FormHandler
+FormInputValueHelper
+FormInput
+InputValue
+FormInputField
+StateMachine</PRE><H2 CLASS="western" STYLE="page-break-after: avoid">
+<FONT FACE="Arial, sans-serif">License</FONT></H2>
+<P STYLE="margin-top: 0.17in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Copyright
+[2011] [Peter <FONT COLOR="#000000"><U>Chapman</U></FONT>] </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Licensed
+under the <FONT COLOR="#000000"><U>Apache</U></FONT> License, Version
+2.0 (the &quot;License&quot;); </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>you
+may not use this file except in compliance with the License. </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>You
+may obtain a copy of the License at </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>http://www.apache.org/licenses/LICENSE-2.0
+</FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"> 
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Unless
+required by applicable law or agreed to in writing, software
+distributed </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>under
+the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT
+WARRANTIES OR </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>CONDITIONS
+OF ANY KIND, either express or implied. See the License for the
+specific </FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>language
+governing permissions and limitations under the License.</FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"><FONT FACE="Courier New, monospace"><FONT SIZE=2>Contributors:</FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0in"> <FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2><U>David</U></FONT></FONT></FONT><FONT FACE="Courier New, monospace"><FONT SIZE=2>
+</FONT></FONT><FONT COLOR="#000000"><FONT FACE="Courier New, monospace"><FONT SIZE=2><U>Evans</U></FONT></FONT></FONT></P>
+<P STYLE="margin-top: 0.17in"><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+<P><BR><BR>
+</P>
+</BODY>
+</HTML>

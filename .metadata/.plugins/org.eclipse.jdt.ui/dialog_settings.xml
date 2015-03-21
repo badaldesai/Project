@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="480,442" key="UserLibraryLoadSaveDialog.size"/>
+	<item value="/Users/mac/Desktop/College" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="Java SE 6 [1.6.0_65-b14-462]" key="org.eclipse.jdt.ui.last.selected.project.jre"/>
+	<item value="2" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<item value="JavaSE-1.7" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.FilteredTypesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="54" key="DIALOG_Y_ORIGIN"/>
+			<item value="203" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item value="true" key="group_libraries"/>
+		<item value="false" key="linkWithEditor"/>
+		<item value="2" key="layout"/>
+		<item value="1" key="rootMode"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1390701611001&quot;&gt;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0A;&lt;xmlDefinedFilters&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0A;&lt;/customFilters&gt;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
+	</section>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="11" key="INCLUDE_MASK"/>
+		<item value="0" key="HISTORY_SIZE"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_unimplemented"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="javadoc">
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="false" key="notree"/>
+		<item value="true" key="splitindex"/>
+		<item value="/Library/Java/JavaVirtualMachines/jdk1.7.0_51.jdk/Contents/Home/bin/javadoc" key="javadoc_command_history"/>
+		<item value="true" key="use"/>
+		<item value="false" key="nonavbar"/>
+		<item value="public" key="access"/>
+		<item value="true" key="version"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="/Users/mac/Documents/workspace/Duplicate/doc" key="destdir"/>
+		<item value="true" key="author"/>
+		<item value="" key="docletname"/>
+		<item value="1.7" key="source"/>
+		<item value="false" key="openinbrowser"/>
+		<item value="false" key="noindex"/>
+		<item value="" key="docletpath"/>
+		<item value="/Users/mac/Documents/workspace/Duplicate/javadoc.xml" key="antpath"/>
+		<item value="true" key="fromStandard"/>
+		<section name="projects">
+			<section name="Countnoocc">
+				<item value="/Users/mac/Documents/workspace/Countnoocc/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Countnoocc/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Unicode">
+				<item value="/Users/mac/Documents/workspace/Unicode/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Unicode/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Factorial">
+				<item value="/Users/mac/Documents/workspace/Factorial/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Factorial/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="encrpt2">
+				<item value="/Users/mac/Documents/workspace/encrpt2/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/encrpt2/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Find&amp;Replace">
+				<item value="/Users/mac/Documents/workspace/Find&amp;Replace/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Find&amp;Replace/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="MergeSort">
+				<item value="/Users/mac/Documents/workspace/MergeSort/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/MergeSort/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Palindrome">
+				<item value="/Users/mac/Documents/workspace/Palindrome/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Palindrome/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Proj_gui">
+				<item value="/Users/mac/Documents/workspace/Proj_gui/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Proj_gui/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="MusicPlayer">
+				<item value="/Users/mac/Documents/workspace/MusicPlayer/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/MusicPlayer/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Example">
+				<item value="/Users/mac/Documents/workspace/Example/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Example/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="QuickSort">
+				<item value="/Users/mac/Documents/workspace/QuickSort/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/QuickSort/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="BST">
+				<item value="/Users/mac/Documents/workspace/BST/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/BST/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="encrypt">
+				<item value="/Users/mac/Documents/workspace/encrypt/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/encrypt/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="PermTech">
+				<item value="/Users/mac/Documents/workspace/PermTech/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/PermTech/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Solmaz">
+				<item value="/Users/mac/Documents/workspace/Solmaz/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Solmaz/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Project">
+				<item value="/Users/mac/Documents/workspace/Project/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Project/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="DetectingUn">
+				<item value="/Users/mac/Documents/workspace/DetectingUn/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/DetectingUn/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Palindrom">
+				<item value="/Users/mac/Documents/workspace/Palindrom/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Palindrom/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Fibonnic">
+				<item value="/Users/mac/Documents/workspace/Fibonnic/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Fibonnic/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="SCC">
+				<item value="/Users/mac/Documents/workspace/SCC/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/SCC/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Input">
+				<item value="/Users/mac/Documents/workspace/Input/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Input/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Maximum">
+				<item value="/Users/mac/Documents/workspace/Maximum/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Maximum/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="CriticalBridge">
+				<item value="/Users/mac/Documents/workspace/CriticalBridge/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/CriticalBridge/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="MinCut">
+				<item value="/Users/mac/Documents/workspace/MinCut/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/MinCut/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Duplicate">
+				<item value="/Users/mac/Documents/workspace/Duplicate/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Duplicate/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Assm">
+				<item value="/Users/mac/Documents/workspace/Assm/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/Assm/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="SubString">
+				<item value="/Users/mac/Documents/workspace/SubString/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/SubString/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="HeapSort">
+				<item value="/Users/mac/Documents/workspace/HeapSort/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/HeapSort/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="validIP">
+				<item value="/Users/mac/Documents/workspace/validIP/doc" key="destdir"/>
+				<item value="/Users/mac/Documents/workspace/validIP/javadoc.xml" key="antpath"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
+	<section name="JavadocWizardDialog">
+		<item value="600" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="582" key="DIALOG_HEIGHT"/>
+		<item value="214" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

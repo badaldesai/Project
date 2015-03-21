@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;FbSol1.main().sc&apos; in &apos;FbSol1.main()&apos; to field&#x0A;- Original project: &apos;CookingTheBookFb&apos;&#x0A;- Original element: &apos;FbSol1.main().sc&apos;&#x0A;- Field name: &apos;sc&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;sc&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{FbSol1.java" name="sc" selection="194 84" stamp="1420782420266" static="true" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;Bracketverify.main().sc&apos; in &apos;Bracketverify.main()&apos; to field&#x0A;- Original project: &apos;BracketVerify&apos;&#x0A;- Original element: &apos;Bracketverify.main().sc&apos;&#x0A;- Field name: &apos;sc&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;sc&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{Bracketverify.java" name="sc" selection="102 27" stamp="1425527489572" static="true" version="1.0" visibility="2"/>
+</session>

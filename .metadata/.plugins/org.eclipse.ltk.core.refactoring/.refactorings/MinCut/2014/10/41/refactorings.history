@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;MinCut.readmap().br&apos; in &apos;MinCut.readmap()&apos; to field&#x0A;- Original project: &apos;MinCut&apos;&#x0A;- Original element: &apos;MinCut.readmap().br&apos;&#x0A;- Field name: &apos;br&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;br&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{MinCut.java" name="br" selection="2475 28" stamp="1412477470637" static="true" version="1.0" visibility="2"/>
+</session>

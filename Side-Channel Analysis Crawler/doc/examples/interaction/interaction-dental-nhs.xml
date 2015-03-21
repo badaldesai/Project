@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+	<specification>
+		<click>
+			<tag>a</tag>
+			<xpath>/HTML/BODY/DIV[3]/DIV/DIV[3]/DIV/DIV[2]/DIV/DIV[2]/DIV[2]/A</xpath>
+		</click>
+		<click>
+			<tag>input</tag>
+			<attribute>
+				<name>value</name>
+				<value>Next</value>
+			</attribute>
+		</click>
+		<matchOverride>
+			<match>
+				<pattern><![CDATA[((<!--if there is an error from the server we want to show the error container-->)|(<div class="messagebox"><\/div>))[\w\W]*(<div class="clear"><\/div>)]]></pattern>
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[<script[\w\W]*?(</script>)]]></pattern>								  
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[<style[\w\W]*?(</style>)]]></pattern>								  
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[<title[\w\W]*?(</title>)]]></pattern>								  
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[</?\w+((\s+\w+(\s*=\s*(?:".*?"|'.*?'|[^'">\s]+))?)+\s*|\s*)/?>]]></pattern>								  
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[<.*?>]]></pattern>
+				<replace></replace>
+			</match>
+			<match>
+				<pattern><![CDATA[\s]]></pattern>
+				<replace></replace>
+			</match>
+			</matchOverride>
+	</specification>
+	
+	

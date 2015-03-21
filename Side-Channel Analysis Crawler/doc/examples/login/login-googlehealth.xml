@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<randomPreCrawl>
+<preCrawl>
+	<url>
+		<value>http://www.google.com/health</value>
+	</url>
+	<input>
+		<id>Email</id>
+		<value>example@example.com</value>
+	</input>
+	<input>
+		<id>Passwd</id>
+		<value>gPassWrd</value>
+	</input>
+	<click>
+		<id>signIn</id>
+	</click>
+</preCrawl>
+</randomPreCrawl>

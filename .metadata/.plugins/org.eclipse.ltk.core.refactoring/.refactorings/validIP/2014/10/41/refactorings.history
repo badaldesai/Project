@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;validIP.IPcheck.main().br&apos; in &apos;validIP.IPcheck.main()&apos; to field&#x0A;- Original project: &apos;validIP&apos;&#x0A;- Original element: &apos;validIP.IPcheck.main().br&apos;&#x0A;- Field name: &apos;br&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;br&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;validIP{IPcheck.java" name="br" selection="389 28" stamp="1412477242309" static="true" version="1.0" visibility="2"/>
+</session>

@@ -1,0 +1,16 @@
+<root>
+  <facet id="jst.jaxrs">
+    <node name="libprov">
+      <node name="last-provider-used">
+        <attribute name="1.1" value="jaxrs-user-library-provider"/>
+      </node>
+    </node>
+    <node name="user.library.provider">
+      <node name="last.used.libraries">
+        <node name="1.1">
+          <node name="apachwink"/>
+        </node>
+      </node>
+    </node>
+  </facet>
+</root>

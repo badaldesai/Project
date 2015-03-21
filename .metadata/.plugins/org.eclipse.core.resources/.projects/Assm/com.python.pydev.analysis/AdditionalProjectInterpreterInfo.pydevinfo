@@ -1,0 +1,42 @@
+-- VERSION_4
+-- START DISKCACHE
+/Users/mac/Documents/workspace/.metadata/.plugins/org.eclipse.core.resources/.projects/Assm/com.python.pydev.analysis/v2_indexcache
+Server|1405832276000|/Users/mac/Documents/workspace/Assm/src/Server.py
+Client|1405832284000|/Users/mac/Documents/workspace/Assm/src/Client.py
+-- END DISKCACHE
+-- START DICTIONARY
+6
+5=clientInterface
+3=MyDataBase
+4=MyTCPHandler.handle
+6=MyTCPHandler
+2=Server
+1=Client
+-- END DICTIONARY
+-- START TREE 1
+9
+cho|1|choise!11@
+cli|1|clientInterface!9@
+cus|5|customer_age!11@customer_address!11@customer_name!11@customer_feild_data!11@customer_phone_number!11@
+dat|2|data!11@data_packet!11@
+l_c|1|l_clientInterface!11@
+myd|1|MyDataBase!17@
+myt|1|MyTCPHandler!17@
+rec|1|received!11@
+soc|1|sock!11@
+-- END TREE
+-- START TREE 2
+12
+add|1|addCustomer!3&18@
+d|1|d!3&19@
+dat|2|data!4&19@DatabaseLoad_Status!3&19@
+del|1|deleteCustomer!3&18@
+dis|1|displayOptions!5&10@
+fin|1|findCustumer!3&18@
+han|1|handle!6&18@
+loa|1|loadDataBase!3&18@
+my_|1|my_DataBase!6&19@
+pri|2|printReport!3&18@printDictionary!3&18@
+ser|1|server!6&19@
+upd|1|updateOptions!3&18@
+-- END TREE

@@ -1,0 +1,173 @@
+Side-Channel Analysis Crawler
+Peter Chapman and David Evans. Automated Black-Box Detection of Side-Channel Vulnerabilities in Web Applications. In 18th ACM Conference on Computer and Communications Security (CCS 2011), Chicago, IL. 17-21 October 2011.
+
+Available at: http://www.cs.virginia.edu/sca/
+
+Contact
+This is an initial release with a lot to be improved upon. Please feel free to contact Peter Chapman at pchapman@cs.virginia.edu with any questions or comments.
+Work Abstract
+Web applications divide their state between the client and the server. The frequent and highly dynamic client-server communication that is characteristic of modern web applications leaves them vulnerable to side-channel leaks, even over encrypted connections. We describe a black-box tool for detecting and quantifying the severity of side-channel vulnerabilities by analyzing network traffic over repeated crawls of a web application. By viewing the adversary as a multi-dimensional classifier, we develop a methodology to more thoroughly measure the distinguishably of network traffic for a variety of classification metrics. We evaluate our detection system on several deployed web applications, accounting for proposed client and server-side defenses. Our results illustrate the limitations of entropy measurements used in previous work and show how our new metric based on the Fisher criterion can be used to more robustly reveal side-channels in web applications.
+
+Requirements
+The system must have Java 6 SE installed, Jpcap installed and linked correctly with the correct version of Java, and Firefox 3.x in the PATH as “firefox”. In future updates to this framework newer versions of Firefox will be supported, but the packaged Selenium plugin at the core of the system only works with Firefox 3.
+Overview
+The Side-Channel Analysis (SCA) System is divided into two components. The first is the Side-Channel Analysis Crawler, which takes the appropriate specification files, exercises a web site or web application over multiple trials, building a consistent and representative finite state machine whilst recording relevant network traffic.
+Specification Files
+It is necessary to write a set of specification files that tell the crawler how to interact with a website and which network traffic to measure. The interaction specification lists items to click and definitions for page equivalence. The input specification dictates what user input necessary where. Login specifications are for logging into websites. 
+Interaction Specification
+At a minimum, an interaction specification must specify which elements on a site to click. Elements can be identified by tag, attribute, or via an XPath.
+Simple Example
+<specification>
+	<click>
+		<tag>a</tag>
+		<xpath>/HTML/BODY/DIV[2]/DIV[2]/A</xpath>
+	</click>
+	<noClick>
+		<tag>a</tag>
+		<xpath>/HTML/BODY/A</xpath>
+	</noClick>
+	<waitFor>
+		<id></id>
+		<value>footer</value>
+		<url>.</url>
+	</waitFor>
+	<matchOverride>
+		<match>
+			<pattern>
+				<![CDATA[[\w\W](name="currentquestion")[\w\W]?(<\/?eldset>)]]>
+			</pattern>
+			<replace></replace>
+		</match>
+	</matchOverride>
+</specification>
+
+The above example demonstrates nearly all of the possible configuration types for an interaction specification. Example specification files can be found under doc/examples with comments. The source code that parses the specification files are in the package edu.virginia.pmc8p.sca.input. Click and noClick elements tell the crawler which elements to click, and if necessary, which of those elements not to click. The waitFor element was created because in practice it is possible for pages to periodically load very slowly or incompletely, either due to a temporary shortage of locally available bandwidth or increased traffic on the target website. The crawler will wait for a specified element to load before considering the page “loaded.” In the Simple Example above, the crawler waits for the footer to load on every page it visits. If the footer does not load, it considered the page request to be a failure. By default two page loads are considered to be in the same state if the respective Document Object Models (DOMs) match exactly. This can be limiting in a number of situations. For example, if a site displays some sort of irrelevant or insignificant time-stamp, then each page load would be considered a new state, growing the search space infinitely. The matchOverride elements allows the user to specify subsections of the document to use in the comparisons. The matchOverride consists of a series of match elements describing match and replace rules via regular expressions. The Simple Example removes matches to the regular expression from the state equivalence comparisons.
+Input Specification
+If user-input is required to adequately use a website then an input specification contains information on what types of data to put where. The Search Example below is to test for side-channel leaks in Bing search suggestions, by measuring the network traffic associated with search suggestions from each letter.
+Search Example
+<inputSpec>
+	<form>
+		<beforeClickElement>
+			<tag>input</tag>
+			<attribute>
+				<name>id</name>
+				<value>sb_form_q</value>
+			</attribute>
+		</beforeClickElement>
+		<field>
+			<id>sb_form_q</id>
+			<value> </value>
+			<value>a</value>
+			<value>b</value>
+			<value>c</value>
+			<value>d</value>
+			<value>e</value>
+			<value>f</value>
+			<value>g</value>
+			<value>h</value>
+			<value>i</value>
+			<value>j</value>
+			<value>k</value>
+			<value>l</value>
+			<value>m</value>
+			<value>n</value>
+			<value>o</value>
+			<value>p</value>
+			<value>q</value>
+			<value>r</value>
+			<value>s</value>
+			<value>t</value>
+			<value>u</value>
+			<value>v</value>
+			<value>w</value>
+			<value>x</value>
+			<value>y</value>
+			<value>z</value>
+		</field>
+	</form>
+</inputSpec>
+A form element contains the input information associated with a “form” as defined by the internally used Crawljax system. Exactly what defines a “form” is uncertain, but for practical purposes it is just a logical grouping. Within an form element there must be at least two subelements, one that dictates when the form values are applied and another that contains the location and values for user input. beforeClickElement is the button that will be clicked once the values specified in the rest of the specification have been applied. In practice this is usually some sort of submit button. In the above example it is the search text field on the Bing homepage. A field element details the location and values to be filled in. Keep in mind, that for a complex form it is likely that there will be many field subelements associated with a single form. First in the field is an identifier for an input element to be filled. This is usually an ID but could also be an XPath (see the NHS specification files for more examples). Then is a list of values to try in the form. In the sample case, the crawler will type each letter, individually, into the search suggestion field.
+There is also support for randomizing the data entered into fields, but it was never used in practice. I recommend looking at the source code for more information.
+Login Specification
+Login specifications tell the crawler how to login to a website.
+<randomPreCrawl>
+<preCrawl>
+	<url>
+		<value>http://www.google.com/health</value>
+	</url>
+	<input>
+		<id>Email</id>
+		<value>example@example.com</value>
+	</input>
+	<input>
+		<id>Passwd</id>
+		<value>FakePassword</value>
+	</input>
+	<click>
+		<id>signIn</id>
+	</click>
+</preCrawl>
+<preCrawl>
+	<url>
+		<value>http://www.google.com/health</value>
+	</url>
+	<input>
+		<id>Email</id>
+		<value>example@example.org</value>
+	</input>
+	<input>
+		<id>Passwd</id>
+		<value>FakePassword2</value>
+	</input>
+	<click>
+		<id>signIn</id>
+	</click>
+</preCrawl>
+</randomPreCrawl>
+The above code snippet for the now defunct Google Health, will begin each crawl by first logging into the dialog at the URL specified by the url element. The remaining elements under preCrawl represent a list of input actions, in this case username and password, followed by the part of the page to click to complete the process (a sign-in button).
+Network Specifications
+The network capture program used in this framework Jpcap, by default, logs all network traffic. In practice this can contain a lot of irrelevant data, such as operating system update mechanisms or the RSS feed checker built into Mozilla Firefox. To filter out the extra traffic at filter file can be created which contains a list of IPs or protocols that will be filtered out of the recorded traces. Alternatively a whitelist file can be supplied which filters out all traffic but those matched by the whitelist. An non-empty whitelist overrides the filter file.
+Running a Crawl
+[sudo] java -jar crawl.jar <Root URL> <Interaction Spec> <Filter File> <Whitelist File> <Max # of States> <Max Depth> <Max Run Time (Seconds)> <Trials> <Device to Monitor> <Output Directory> <Input Spec> [Login Spec]
+java -jar crawl.jar http://google.com doc/examples/interaction/interaction-google.xml doc/examples/network/filter.txt doc/examples/network/whitelist-google.txt 27 2 3600 10 0 google-search doc/examples/input/input-google.xml 
+
+Make sure to execute the binary from the root of the project directory.
+Repairing a Crawl
+It is often the case that something goes wrong during a specific trial of a crawl. To fix this, there is an included tool to “repair” a crawl. That is, given one trial designated as correct, it will match other trials accordingly. For example, let it be the case that the first trial goes perfectly, but the second trial found an error page on the crawled website, resulting in an extra state. The repair tool will analyze recorded states, throwing out extras, namely the error page.
+The usage for the crawl repairer is as follows:
+java -jar repair.jar <Good Crawl Directory> <Bad Crawl Directory>
+Make sure to execute the binary from the root of the project directory.
+Modified Crawljax Files
+
+WebDriverBrowserBuilder
+Crawler
+CandidateElementExtractor
+CrawlActions
+Helper
+WebDriverBackedEmbeddedBrowser
+FormHandler
+FormInputValueHelper
+FormInput
+InputValue
+FormInputField
+StateMachine
+License
+Copyright [2011] [Peter Chapman] 
+
+Licensed under the Apache License, Version 2.0 (the "License"); 
+you may not use this file except in compliance with the License. 
+You may obtain a copy of the License at 
+
+http://www.apache.org/licenses/LICENSE-2.0 
+ 
+Unless required by applicable law or agreed to in writing, software distributed 
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+CONDITIONS OF ANY KIND, either express or implied. See the License for the specific 
+language governing permissions and limitations under the License.
+
+Contributors:
+ David Evans
+
+
+
+

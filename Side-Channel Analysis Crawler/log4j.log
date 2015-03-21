@@ -1,0 +1,136 @@
+0    INFO  edu.virginia.pmc8p.sca.input.InputBuilder  - Constructing Input Specification
+10   INFO  edu.virginia.pmc8p.sca.input.InputBuilder  - Processing Form
+14   INFO  edu.virginia.pmc8p.sca.input.InputBuilder  - Tag:input
+14   INFO  edu.virginia.pmc8p.sca.input.InputBuilder  - Attribute:id, sb_form_q
+43   INFO  com.crawljax.browser.BrowserPool  - Max Number of Browsers: 1
+43   INFO  com.crawljax.core.CrawljaxController  - Starting Crawljax...
+43   INFO  com.crawljax.core.CrawljaxController  - Used plugins:
+44   INFO  com.crawljax.core.plugin.CrawljaxPluginsUtil  - edu.virginia.pmc8p.sca.plugins.MirrorGenerator
+44   INFO  com.crawljax.core.plugin.CrawljaxPluginsUtil  - edu.virginia.pmc8p.sca.plugins.PacketSniffer
+44   INFO  com.crawljax.core.plugin.CrawljaxPluginsUtil  - edu.virginia.pmc8p.sca.plugins.CacheManager
+44   INFO  com.crawljax.core.CrawljaxController  - Embedded browser implementation: firefox
+44   INFO  com.crawljax.core.CrawljaxController  - Number of threads: 1
+44   INFO  com.crawljax.core.CrawljaxController  - Crawl depth: 2
+44   INFO  com.crawljax.core.CrawljaxController  - Crawljax initialized!
+52   INFO  com.crawljax.core.CrawljaxController  - Start crawling with 1 crawl elements
+46969 ERROR com.crawljax.browser.BrowserPool  - Creation of Browser faild!
+org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:46)
+	at org.openqa.selenium.firefox.FirefoxDriver.connectTo(FirefoxDriver.java:139)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:129)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
+	at com.crawljax.browser.WebDriverBrowserBuilder.buildEmbeddedBrowser(WebDriverBrowserBuilder.java:117)
+	at com.crawljax.browser.BrowserPool.getBrowserInstance(BrowserPool.java:180)
+	at com.crawljax.browser.BrowserPool.createBrowser(BrowserPool.java:134)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:358)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:68)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.<init>(NewProfileExtensionConnection.java:57)
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:44)
+	... 8 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Failed to start up socket within 45000
+	at org.openqa.selenium.firefox.internal.AbstractExtensionConnection.connectToBrowser(AbstractExtensionConnection.java:143)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:66)
+	... 10 more
+103529 ERROR com.crawljax.browser.BrowserPool  - Creation of Browser faild!
+org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:46)
+	at org.openqa.selenium.firefox.FirefoxDriver.connectTo(FirefoxDriver.java:139)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:129)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
+	at com.crawljax.browser.WebDriverBrowserBuilder.buildEmbeddedBrowser(WebDriverBrowserBuilder.java:117)
+	at com.crawljax.browser.BrowserPool.getBrowserInstance(BrowserPool.java:180)
+	at com.crawljax.browser.BrowserPool.createBrowser(BrowserPool.java:134)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:358)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:377)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:68)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.<init>(NewProfileExtensionConnection.java:57)
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:44)
+	... 9 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Failed to start up socket within 45000
+	at org.openqa.selenium.firefox.internal.AbstractExtensionConnection.connectToBrowser(AbstractExtensionConnection.java:143)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:66)
+	... 11 more
+160047 ERROR com.crawljax.browser.BrowserPool  - Creation of Browser faild!
+org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?JavaScript error: chrome://browser/content/urlbarBindings.xml, line 674: aUrl is undefined
+
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:46)
+	at org.openqa.selenium.firefox.FirefoxDriver.connectTo(FirefoxDriver.java:139)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:129)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
+	at com.crawljax.browser.WebDriverBrowserBuilder.buildEmbeddedBrowser(WebDriverBrowserBuilder.java:117)
+	at com.crawljax.browser.BrowserPool.getBrowserInstance(BrowserPool.java:180)
+	at com.crawljax.browser.BrowserPool.createBrowser(BrowserPool.java:134)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:358)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:377)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:377)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?JavaScript error: chrome://browser/content/urlbarBindings.xml, line 674: aUrl is undefined
+
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:68)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.<init>(NewProfileExtensionConnection.java:57)
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:44)
+	... 10 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Failed to start up socket within 45000
+	at org.openqa.selenium.firefox.internal.AbstractExtensionConnection.connectToBrowser(AbstractExtensionConnection.java:143)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:66)
+	... 12 more
+160048 ERROR com.crawljax.browser.BrowserPool  - Could not rescure browser creation!
+org.openqa.selenium.WebDriverException: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?JavaScript error: chrome://browser/content/urlbarBindings.xml, line 674: aUrl is undefined
+
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:46)
+	at org.openqa.selenium.firefox.FirefoxDriver.connectTo(FirefoxDriver.java:139)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:129)
+	at org.openqa.selenium.firefox.FirefoxDriver.<init>(FirefoxDriver.java:113)
+	at com.crawljax.browser.WebDriverBrowserBuilder.buildEmbeddedBrowser(WebDriverBrowserBuilder.java:117)
+	at com.crawljax.browser.BrowserPool.getBrowserInstance(BrowserPool.java:180)
+	at com.crawljax.browser.BrowserPool.createBrowser(BrowserPool.java:134)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:358)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:377)
+	at com.crawljax.browser.BrowserPool$BrowserBooter$1.run(BrowserPool.java:377)
+	at java.lang.Thread.run(Thread.java:695)
+Caused by: org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(/Applications/Firefox.app/Contents/MacOS/firefox-bin) on port 7055; process output follows: 
+?JavaScript error: chrome://browser/content/urlbarBindings.xml, line 674: aUrl is undefined
+
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.9.4', java.version: '1.6.0_65'
+Driver info: driver.version: firefox
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:68)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.<init>(NewProfileExtensionConnection.java:57)
+	at org.openqa.selenium.firefox.internal.ExtensionConnectionFactory.connectTo(ExtensionConnectionFactory.java:44)
+	... 10 more
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Failed to start up socket within 45000
+	at org.openqa.selenium.firefox.internal.AbstractExtensionConnection.connectToBrowser(AbstractExtensionConnection.java:143)
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.connectToBrowser(NewProfileExtensionConnection.java:66)
+	... 12 more
