@@ -70,3 +70,20 @@ Caused by: java.io.IOException: error=2, No such file or directory
 	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
 	... 13 more
+
+!ENTRY org.eclipse.egit.core 4 0 2015-03-23 00:03:01.844
+!MESSAGE An exception occurred during push on URI https://github.com/badaldesai/Project.git: https://github.com/badaldesai/Project.git: not authorized
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/badaldesai/Project.git: not authorized
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:160)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:228)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI.execute(PushOperationUI.java:167)
+	at org.eclipse.egit.ui.internal.push.PushOperationUI$1.run(PushOperationUI.java:229)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/badaldesai/Project.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:501)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:399)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:154)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1173)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:156)
+	... 4 more
