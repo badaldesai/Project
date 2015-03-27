@@ -26,18 +26,21 @@ public class cookieclick {
 		double fboost = Double.parseDouble(numbers[1]);
 		double target = Double.parseDouble(numbers[2]);
 		double rate = 2.0;
-		
-		
-		return target;
+		double fasttime = cookie(cost, fboost, target, rate);
+		return fasttime;
 	}
 	
 	public static double cookie(double cost, double fboost, double target, double rate){
 		
-		if (target<=cost)
+		double time = 0;
+		if ((target/rate)>(cost/rate + target/(rate+fboost))){
+			rate = rate + fboost;
+			double timetaken = cookie(cost,fboost,target,rate);
+			time = time + timetaken;
+		}else{
 			return (target/rate);
+		}
 		
-		
-		return 2.3;
+		return time;
 	}
-
 }
