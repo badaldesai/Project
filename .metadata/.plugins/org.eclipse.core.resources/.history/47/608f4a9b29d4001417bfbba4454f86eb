@@ -36,7 +36,6 @@ public class cookieclick {
 		if (target<=cost)
 			return (target/rate);
 		
-		
 		return 2.3;
 	}
 

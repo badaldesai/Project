@@ -25,19 +25,12 @@ public class cookieclick {
 		double cost= Double.parseDouble(numbers[0]);
 		double fboost = Double.parseDouble(numbers[1]);
 		double target = Double.parseDouble(numbers[2]);
-		double rate = 2.0;
+		
+		if (cost/2 > target/2)
+			return target/2;
 		
 		
 		return target;
-	}
-	
-	public static double cookie(double cost, double fboost, double target, double rate){
-		
-		if (target<=cost)
-			return (target/rate);
-		
-		
-		return 2.3;
 	}
 
 }
