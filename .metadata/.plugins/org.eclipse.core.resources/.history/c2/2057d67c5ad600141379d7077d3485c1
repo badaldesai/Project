@@ -26,6 +26,8 @@ public class cookieclick {
 		double fboost = Double.parseDouble(numbers[1]);
 		double target = Double.parseDouble(numbers[2]);
 		double rate = 2.0;
+		//double fasttime = cookie(cost, fboost, target, rate);
+		//return fasttime;
 		double time = 0;
 		while ((target/rate)>(cost/rate + target/(rate+fboost))){
 			time = time + cost/rate;
