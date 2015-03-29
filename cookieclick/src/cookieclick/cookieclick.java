@@ -11,8 +11,8 @@ public class cookieclick {
 	private static Scanner sc;
 	public static void main(String[] args) throws FileNotFoundException {
 		sc = new Scanner(new File("/Users/mac/Desktop/Input.txt"));
-		//PrintStream out = new PrintStream(new FileOutputStream("/Users/mac/Desktop/output.txt"));
-		//System.setOut(out);
+		PrintStream out = new PrintStream(new FileOutputStream("/Users/mac/Desktop/output.txt"));
+		System.setOut(out);
 		int cases = Integer.parseInt(sc.nextLine());
 		for(int i=0; i<cases; i++){
 			double mintime = fastcookiefinder();
@@ -26,21 +26,14 @@ public class cookieclick {
 		double fboost = Double.parseDouble(numbers[1]);
 		double target = Double.parseDouble(numbers[2]);
 		double rate = 2.0;
-		double fasttime = cookie(cost, fboost, target, rate);
-		return fasttime;
-	}
-	
-	public static double cookie(double cost, double fboost, double target, double rate){
-		
+		//double fasttime = cookie(cost, fboost, target, rate);
+		//return fasttime;
 		double time = 0;
-		if ((target/rate)>(cost/rate + target/(rate+fboost))){
+		while ((target/rate)>(cost/rate + target/(rate+fboost))){
+			time = time + cost/rate;
 			rate = rate + fboost;
-			double timetaken = cookie(cost,fboost,target,rate);
-			time = time + timetaken;
-		}else{
-			return (target/rate);
+			//System.out.println(time);
 		}
-		
-		return time;
-	}
+			return time+target/rate;
+		}
 }
