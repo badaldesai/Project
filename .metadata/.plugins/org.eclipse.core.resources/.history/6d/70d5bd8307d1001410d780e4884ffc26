@@ -1,9 +1,0 @@
-package googleQ2014;
-
-public class magicTrick {
-
-	public static void main(String[] args) {
-		
-	}
-
-}

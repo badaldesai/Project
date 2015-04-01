@@ -2,32 +2,45 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="CommitDialog.authorValues">
+		<item value="badaldesai &lt;badaldesai@gmail.com&gt;"/>
 		<item value="Badal &lt;badaldesai@gmail.com&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="badaldesai &lt;badaldesai@gmail.com&gt;"/>
 		<item value="Badal &lt;badaldesai@gmail.com&gt;"/>
 	</list>
 	<section name="GitCommitMessageComponent">
 	</section>
 	<section name="org.eclipse.egit.ui.COMMIT_DIALOG_SECTION">
 		<item value="626" key="DIALOG_WIDTH"/>
-		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="59" key="DIALOG_Y_ORIGIN"/>
+		<item value="257" key="DIALOG_X_ORIGIN"/>
 		<item value="623" key="DIALOG_HEIGHT"/>
-		<item value="201" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="CommitSelectionDialogSection">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History/&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="32" key="DIALOG_Y_ORIGIN"/>
+			<item value="214" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
+		</section>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
 		<item value="475" key="DIALOG_WIDTH"/>
 		<item value="106" key="DIALOG_Y_ORIGIN"/>
-		<item value="277" key="DIALOG_X_ORIGIN"/>
 		<item value="389" key="DIALOG_HEIGHT"/>
+		<item value="277" key="DIALOG_X_ORIGIN"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="650" key="DIALOG_WIDTH"/>
 		<item value="72" key="DIALOG_Y_ORIGIN"/>
-		<item value="440" key="DIALOG_HEIGHT"/>
 		<item value="189" key="DIALOG_X_ORIGIN"/>
+		<item value="440" key="DIALOG_HEIGHT"/>
 		<item value="1|.Helvetica Neue DeskInterface|11.0|0|COCOA|1|.HelveticaNeueDeskInterface-Regular" key="DIALOG_FONT_NAME"/>
 	</section>
 </section>

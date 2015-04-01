@@ -18,12 +18,7 @@
 		<item value="-36" key="DIALOG_Y_ORIGIN"/>
 		<item value="-37" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="InstallationDialogSettings">
-		<item value="702" key="DIALOG_WIDTH"/>
-		<item value="-31" key="DIALOG_Y_ORIGIN"/>
-		<item value="652" key="DIALOG_HEIGHT"/>
-		<item value="-13" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	<section name="NewWizardAction">
 	</section>
 	<section name="ZipFileImportWizard">
 		<item value="false" key="WizardZipFileResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID"/>
@@ -31,14 +26,19 @@
 			<item value="/Users/mac/Desktop/Workspace/Side-Channel Analysis Crawler/packaged-bins/crawl.jar"/>
 		</list>
 	</section>
-	<section name="NewWizardAction">
+	<section name="InstallationDialogSettings">
+		<item value="702" key="DIALOG_WIDTH"/>
+		<item value="-31" key="DIALOG_Y_ORIGIN"/>
+		<item value="-13" key="DIALOG_X_ORIGIN"/>
+		<item value="652" key="DIALOG_HEIGHT"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="ShowViewDialog">
 		<item value="308" key="DIALOG_WIDTH"/>
 		<item value="org.python.pydev.views.CurrentExceptionView" key="ShowViewDialog.STORE_SELECTED_VIEW_ID"/>
 		<item value="95" key="DIALOG_Y_ORIGIN"/>
-		<item value="349" key="DIALOG_X_ORIGIN"/>
 		<item value="415" key="DIALOG_HEIGHT"/>
+		<item value="349" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
 		<list key="ShowViewDialog.STORE_EXPANDED_CATEGORIES_ID">
 			<item value="org.python.pydev"/>
