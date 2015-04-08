@@ -1,0 +1,30 @@
+package maxcity;
+
+public class driver {
+
+	public static void main(String[] args) {
+		graph g = new graph();
+		g.addEdge("1", "2");
+		g.addEdge("2", "3");
+		g.addEdge("1", "11");
+		g.addEdge("3", "11");
+		g.addEdge("4", "11");
+		g.addEdge("4", "5");
+		g.addEdge("5", "6");
+		g.addEdge("5", "7");
+		g.addEdge("6", "7");
+		g.addEdge("4", "12");
+		g.addEdge("8", "12");
+		g.addEdge("9", "12");
+		g.addEdge("8", "10");
+		g.addEdge("9", "10");
+		g.addEdge("8", "9");
+	dfsIterator maxc = new dfsIterator(g,"6");
+	StringBuilder sb = new StringBuilder();
+	while (maxc.hasNext()){
+		sb.append(' ').append(maxc.next());
+	}
+	System.out.println(sb.substring(1));
+	
+	}
+}
