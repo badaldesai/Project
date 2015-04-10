@@ -1,5 +1,7 @@
 package maxcity;
 
+import java.util.*;
+
 class Graph{
 	
 	private Map<String, List<String>> edges = new HashMap<String, List<String>>();
@@ -10,32 +12,31 @@ class Graph{
 		if(neighbors1==null){
 			this.edges.put(v1, neighbors1=new ArrayList<String>());
 		}
-		neighbors.add(v2);
+		neighbors1.add(v2);
 		
 		List<String> neighbors2 = this.edges.get(v2);
 		if(neighbors2==null){
 			this.edges.put(v2, neighbors2=new ArrayList<String>());
 		}
-		neighbors.add(v1);
+		neighbors2.add(v1);
 	}
 	
 	public List<String> getNeighbors(String v){
 		List<String> neighbors = this.edges.get(v);
-		return neighors;
-	}
-}
-
-class Vertex{
-	String name;
-	Neighbor adjList;
-	Vertex(String name, Neighbor neighbors){
-		this.name = name;
-		this.adjList = neighbors;
+		return neighbors;
 	}
 }
 
 
 public class maxcity {
 
+	
+	
+	
+	public void dfs(Graph g, String vertex){
+		
+		
+	}
+	
 }
 
