@@ -752,3 +752,683 @@ Caused by: java.io.IOException: error=2, No such file or directory
 	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
 	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
 	... 13 more
+!SESSION 2015-04-09 23:28:13.358 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-09 23:28:21.678
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-09 23:28:22.082
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-09 23:28:22.082
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4456bdfe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1ad391bf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+!SESSION 2015-04-10 19:57:13.760 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-10 19:57:25.949
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-10 19:57:26.440
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-10 19:57:26.440
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@73918082,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@558c1214,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-10 19:58:06.543
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-10 19:58:28.938 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-10 19:58:41.742
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-10 19:58:42.130
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-10 19:58:42.130
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2fed7c17,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@106de296,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-10 19:59:20.555
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-11 17:59:03.342 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-11 17:59:17.316
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-11 17:59:17.809
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-11 17:59:17.810
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@607f3b3c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@410a11a2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-11 17:59:57.444
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-12 21:35:58.444 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-12 21:36:07.610
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-12 21:36:08.091
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-12 21:36:08.092
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@15b66f4e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7c457504,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-12 21:36:48.073
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-13 22:33:09.374 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-13 22:33:17.661
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-13 22:33:18.135
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-13 22:33:18.135
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f1ac3f5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@66373265,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-13 22:33:59.236
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-14 23:31:23.406 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-14 23:31:35.662
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-14 23:31:36.192
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-14 23:31:36.192
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@649dd18c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@352871ef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-14 23:32:18.968
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-15 22:11:57.407 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-15 22:12:24.774
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-15 22:12:25.246
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-15 22:12:25.246
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@234689cd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6c0103d2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-15 22:13:07.521
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-16 21:25:47.303 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-16 21:25:55.297
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-16 21:25:55.795
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-16 21:25:55.795
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6a566914,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4f0cd696,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-16 21:26:35.734
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-17 20:57:36.245 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-17 20:57:45.754
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-17 20:57:46.252
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-17 20:57:46.252
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@70204224,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@55d682fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-17 20:58:26.432
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-19 01:33:49.874 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-19 01:33:59.236
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-19 01:33:59.731
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-19 01:33:59.731
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1d325ad2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@54e89ff7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-19 01:34:39.674
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more
+!SESSION 2015-04-19 20:25:15.859 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_51
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/mac/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2015-04-19 20:25:24.872
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2015-04-19 20:25:25.360
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2015-04-19 20:25:25.360
+!MESSAGE A conflict occurred for ALT+COMMAND+R:
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.python.pydev.debug.setnext,Set Next Statement,
+		,
+		Category(org.python.pydev.ui.category.run,PyDev - Run,Python run category,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2cc8ed3a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+COMMAND+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3b4e91ce,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,cocoa,system)
+
+!ENTRY org.python.pydev.shared_core 4 4 2015-04-19 20:26:06.369
+!MESSAGE java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+!STACK 0
+java.lang.RuntimeException: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:308)
+	at org.python.pydev.runners.SimpleRunner.runAndGetOutput(SimpleRunner.java:325)
+	at org.python.pydev.runners.SimplePythonRunner.runAndGetOutputWithInterpreter(SimplePythonRunner.java:95)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.doCreateInterpreterInfo(PythonInterpreterManager.java:68)
+	at org.python.pydev.ui.interpreters.PythonInterpreterManager.internalCreateInterpreterInfo(PythonInterpreterManager.java:44)
+	at org.python.pydev.ui.interpreters.AbstractInterpreterManager.createInterpreterInfo(AbstractInterpreterManager.java:381)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager$CreateInterpreterInfoCallback.createInterpreterInfo(SynchSystemModulesManager.java:173)
+	at org.python.pydev.editor.codecompletion.revisited.SynchSystemModulesManager.updateStructures(SynchSystemModulesManager.java:253)
+	at org.python.pydev.editor.codecompletion.revisited.SyncSystemModulesManagerScheduler$SynchJob.run(SyncSystemModulesManagerScheduler.java:237)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:53)
+Caused by: java.io.IOException: Cannot run program "/usr/local/bin/python3.4": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at org.python.pydev.shared_core.process.ProcessUtils.createProcess(ProcessUtils.java:100)
+	at org.python.pydev.runners.SimpleRunner.createProcess(SimpleRunner.java:49)
+	at org.python.pydev.runners.SimpleRunner.run(SimpleRunner.java:306)
+	... 9 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 13 more

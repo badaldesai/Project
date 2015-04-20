@@ -1,0 +1,31 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.BitSet;
+import java.util.Scanner;
+
+
+public class chargingChaos {
+	private static Scanner sc;
+	public static void main(String[] args) throws FileNotFoundException {
+		sc = new Scanner(new File("/Users/mac/Desktop/input.txt"));
+		//PrintStream out = new PrintStream(new FileOutputStream("/Users/mac/Desktop/output.txt"));
+		//System.setOut(out);
+		int cases = sc.nextInt();
+		for(int i=1;i<=cases;i++){
+			String answer = chargingchaos();
+			System.out.println("Case #" + i + ": " + answer);
+		}
+	}
+	
+	public static String chargingchaos(){
+		int N = sc.nextInt();
+		int L = sc.nextInt();
+		byte[] cn = new byte[N];
+		for(int i=0;i<N;i++){
+			cn[i] = Integer.toBinaryString(sc.nextInt());
+		}
+		return "NOT POSSIBLE";
+	}
+}

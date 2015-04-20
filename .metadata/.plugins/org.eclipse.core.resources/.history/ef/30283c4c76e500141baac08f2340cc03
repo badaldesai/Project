@@ -1,0 +1,67 @@
+package logging;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.Scanner;
+
+public class logging {
+	private static Scanner sc;
+	public static void main(String[] args) throws FileNotFoundException {
+		sc = new Scanner(new File("/Users/mac/Desktop/Input.txt"));
+		//PrintStream out = new PrintStream(new FileOutputStream("/Users/mac/Desktop/output.txt"));
+		//System.setOut(out);
+		int cases = Integer.parseInt(sc.nextLine());
+		for (int i=0; i<cases; i++){
+			
+			System.out.println("Case #"+(i+1)+":");
+			trees();
+		}
+	}
+	public static void trees(){
+		int cases = sc.nextInt();
+		int[][] trees = new int[cases][2];
+		int large0 = 0;
+		int large1 = 0;
+		int small0 = 0;
+		int small1 = 0;
+		for (int i=0;i<cases;i++){
+			trees[i][0] = sc.nextInt();
+			trees[i][1] =sc.nextInt();
+			if (trees[i][0]>large0)
+				large0=trees[i][0];
+			if(trees[i][1]>large1)
+				large1=trees[i][1];
+			
+			if (trees[i][0]<small0)
+				small0=trees[i][0];
+			if(trees[i][1]<small1)
+				small1=trees[i][1];
+			
+		}
+		for (int i=0;i<cases;i++){
+				
+			if(trees[i][0]>small0 && trees[i][0]<large0){
+				if(trees[i][1]>small1 && trees[i][0]<large1){
+					int ans=0;
+					for(int j=0;j<cases;j++){
+						if(trees[i][0]<=trees[j][0] && trees[i][1]<=trees[j][1]){
+							ans++;
+						}
+					}
+					System.out.println(ans + "" + i);
+					
+				}		
+				else
+					System.out.println(0);
+			}
+			else
+				System.out.println(0);
+			
+			
+		}
+		
+		
+	}
+}
