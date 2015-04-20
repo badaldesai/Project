@@ -21,22 +21,41 @@ class Graph{
 		neighbors2.add(v1);
 	}
 	
-	public List<String> getNeighbors(String v){
+	public Iterable<String> getNeighbors(String v){
 		List<String> neighbors = this.edges.get(v);
 		return neighbors;
 	}
 }
 
 
-public class maxcity {
-
+class dfs implements Iterator<String> {
 	
-	
-	
-	public void dfs(Graph g, String vertex){
+	Set<String> visited = new HashSet<String>();
+	Queue<String> queue = new LinkedList<String>();
+	private String next;
 		
-		
+	public void remove(){
+		throw new UnsupportedOperationException();
 	}
 	
+	public boolean hasNext(){
+		return this.next != null;
+	}
+	
+	public String next(){
+		if(this.next == null){
+			throw new NoSuchElementException();
+		}
+		try{
+			this.visited.add(this.next);
+			return this.next;
+		}finally {
+			this.advance();
+		}
+	}
+	
+	public class maxcity{
+		
+	}
 }
 
